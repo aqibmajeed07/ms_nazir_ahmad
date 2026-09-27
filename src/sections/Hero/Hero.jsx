@@ -1,7 +1,7 @@
 import React from 'react';
 import companyConfig from '../../config/company';
 import Button from '../../components/Button/Button';
-import { ArrowRight, PhoneCall, ChevronDown } from 'lucide-react';
+import { ArrowRight, PhoneCall, ChevronDown, Download } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -19,6 +19,15 @@ export function Hero() {
 
       <div className="container hero-container">
         <div className="hero-content">
+          {/* Company Logo */}
+          <div className="hero-logo-wrap">
+            <img 
+              src={companyConfig.logoImage} 
+              alt={`${companyConfig.companyName} Logo`} 
+              className="hero-logo-img" 
+            />
+          </div>
+
           {/* Eyebrow Badge */}
           <div className="hero-badge-wrap">
             <span className="hero-pill-badge">
@@ -38,7 +47,7 @@ export function Hero() {
             {companyConfig.companyName} is an A Class registered contractor delivering civil construction, private and institutional buildings, Jal Shakti drinking water schemes, and power distribution across Jammu &amp; Kashmir.
           </p>
 
-          {/* Primary & Secondary Call to Actions */}
+          {/* Primary, Secondary, and Brochure Call to Actions */}
           <div className="hero-actions">
             <Button href="#projects" variant="primary" size="large" icon={ArrowRight} className="hero-btn-primary">
               View Selected Works
@@ -46,6 +55,15 @@ export function Hero() {
             <Button href="#contact" variant="outline-white" size="large" icon={PhoneCall} className="hero-btn-secondary">
               Request Consultation
             </Button>
+            <a
+              href="/documents/company-brochure.pdf"
+              download="MS-Nazir-Ahmad-Mir-Brochure.pdf"
+              className="hero-btn-brochure"
+              aria-label="Download official company brochure"
+            >
+              <Download size={16} />
+              <span>Brochure</span>
+            </a>
           </div>
 
           {/* Verified Key Metrics Grid */}
@@ -135,6 +153,20 @@ export function Hero() {
           max-width: 820px;
         }
 
+        .hero-logo-wrap {
+          margin-bottom: 20px;
+          animation: heroFadeSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+        }
+
+        .hero-logo-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid rgba(197, 155, 39, 0.5);
+          box-shadow: 0 4px 24px rgba(197, 155, 39, 0.2), 0 0 40px rgba(197, 155, 39, 0.06);
+        }
+
         .hero-badge-wrap {
           margin-bottom: 24px;
           animation: heroFadeSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
@@ -206,6 +238,30 @@ export function Hero() {
         .hero-btn-secondary:hover {
           transform: translateY(-2px);
           background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-btn-brochure {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 13px 22px;
+          border-radius: var(--radius-sm);
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: #F8D882;
+          background-color: rgba(197, 155, 39, 0.15);
+          border: 1px solid rgba(197, 155, 39, 0.42);
+          text-decoration: none;
+          backdrop-filter: blur(8px);
+          transition: all var(--transition-fast);
+        }
+
+        .hero-btn-brochure:hover {
+          background-color: rgba(197, 155, 39, 0.32);
+          border-color: var(--accent);
+          transform: translateY(-2px);
+          color: #FFFFFF;
+          box-shadow: 0 4px 16px rgba(197, 155, 39, 0.25);
         }
 
         /* Verified Metrics Grid */

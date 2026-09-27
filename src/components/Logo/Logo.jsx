@@ -3,12 +3,16 @@ import companyConfig from '../../config/company';
 
 export function Logo({ className = '', variant = 'full', size = 'default' }) {
   const isSmall = size === 'small';
+  const logoSize = isSmall ? 36 : 44;
 
   return (
     <a href="#hero" className={`brand-logo ${className}`} aria-label={companyConfig.companyName}>
-      <div className="logo-symbol">
-        <span className="logo-letter">N</span>
-      </div>
+      <img 
+        src={companyConfig.logoImage} 
+        alt={`${companyConfig.companyName} Logo`} 
+        className="logo-img"
+        style={{ width: logoSize, height: logoSize }}
+      />
       {variant !== 'icon-only' && (
         <div className="logo-text-block">
           <span className="logo-title">{companyConfig.companyName}</span>
@@ -27,23 +31,15 @@ export function Logo({ className = '', variant = 'full', size = 'default' }) {
           text-decoration: none;
           color: inherit;
         }
-        .logo-symbol {
-          width: ${isSmall ? '32px' : '40px'};
-          height: ${isSmall ? '32px' : '40px'};
-          background-color: var(--accent);
-          color: #0F2537;
-          font-family: var(--font-heading);
-          font-weight: 900;
-          font-size: ${isSmall ? '1.1rem' : '1.35rem'};
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: var(--radius-sm);
-          box-shadow: var(--shadow-sm);
+        .logo-img {
+          border-radius: 50%;
+          object-fit: cover;
           flex-shrink: 0;
+          border: 2px solid rgba(197, 155, 39, 0.5);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
           transition: transform var(--transition-fast);
         }
-        .brand-logo:hover .logo-symbol {
+        .brand-logo:hover .logo-img {
           transform: scale(1.04);
         }
         .logo-text-block {
@@ -57,6 +53,12 @@ export function Logo({ className = '', variant = 'full', size = 'default' }) {
           font-size: ${isSmall ? '0.95rem' : '1.1rem'};
           letter-spacing: 0.5px;
           color: var(--text);
+          white-space: nowrap;
+        }
+        @media (max-width: 420px) {
+          .logo-title {
+            font-size: ${isSmall ? '0.85rem' : '0.98rem'};
+          }
         }
         .logo-subtitle {
           font-size: 0.68rem;

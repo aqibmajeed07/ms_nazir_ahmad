@@ -10,6 +10,7 @@ import Gallery from './sections/Gallery/Gallery';
 import Design from './sections/Design/Design';
 import Ratings from './sections/Ratings/Ratings';
 import WhyUs from './sections/WhyUs/WhyUs';
+import Documents from './sections/Documents/Documents';
 import CTA from './sections/CTA/CTA';
 import Contact from './sections/Contact/Contact';
 import Newsletter from './components/Newsletter/Newsletter';
@@ -32,6 +33,7 @@ export function App() {
         <Design theme={theme} />
         <Ratings />
         <WhyUs />
+        <Documents />
         <CTA />
         <Contact />
         <section className="newsletter-wrapper-section">

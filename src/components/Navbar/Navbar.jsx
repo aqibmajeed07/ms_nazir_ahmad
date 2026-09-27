@@ -252,6 +252,14 @@ export function Navbar({ theme, toggleTheme }) {
             >
               Contact Us
             </Button>
+            <a
+              href="/documents/company-brochure.pdf"
+              download="MS-Nazir-Ahmad-Mir-Brochure.pdf"
+              className="mobile-drawer-brochure"
+              onClick={closeMenu}
+            >
+              Download Brochure (PDF)
+            </a>
           </div>
         </nav>
       </div>
@@ -567,9 +575,26 @@ export function Navbar({ theme, toggleTheme }) {
         }
         .mobile-drawer-cta {
           margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
         }
         .w-full {
           width: 100%;
+        }
+        .mobile-drawer-brochure {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 16px;
+          border-radius: var(--radius-sm);
+          font-size: 0.88rem;
+          font-weight: 700;
+          color: var(--accent);
+          background-color: rgba(197, 155, 39, 0.12);
+          border: 1px solid rgba(197, 155, 39, 0.35);
+          text-decoration: none;
+          text-align: center;
         }
       `}</style>
     </header>

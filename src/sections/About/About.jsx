@@ -17,8 +17,8 @@ export function About() {
           <div className="about-image-column">
             <div className="about-image-frame">
               <img
-                src="/images/about_us_hero.jpg"
-                alt="Construction Works in Jammu and Kashmir"
+                src="/images/owner_photo.png"
+                alt={`${companyConfig.proprietor} — Sole Proprietor & Managing Contractor`}
                 className="about-primary-img"
               />
               <div className="about-experience-badge">
@@ -27,15 +27,8 @@ export function About() {
               </div>
             </div>
 
-            {/* Owner Profile Card */}
+            {/* Owner Name & Title */}
             <div className="about-owner-card">
-              <div className="about-owner-photo-wrap">
-                <img
-                  src="/images/owner_photo.png"
-                  alt={`${companyConfig.proprietor} — Sole Proprietor`}
-                  className="about-owner-photo"
-                />
-              </div>
               <div className="about-owner-info">
                 <h4 className="about-owner-name">{companyConfig.proprietor}</h4>
                 <span className="about-owner-role">Sole Proprietor & Managing Contractor</span>
@@ -95,6 +88,20 @@ export function About() {
               <MapPin size={16} className="loc-icon" />
               <span>Office &amp; Registered Yard: <strong>{companyConfig.address.full}</strong></span>
             </div>
+
+            <div className="about-cta-row">
+              <a
+                href="/documents/company-brochure.pdf"
+                download="MS-Nazir-Ahmad-Mir-Brochure.pdf"
+                className="about-download-cta"
+              >
+                <Award size={16} />
+                <span>Download Company Brochure (PDF)</span>
+              </a>
+              <a href="#documents" className="about-docs-link">
+                View Official Licenses &amp; Registrations →
+              </a>
+            </div>
           </div>
 
         </div>
@@ -117,14 +124,26 @@ export function About() {
           position: relative;
           border-radius: var(--radius-md);
           overflow: hidden;
-          box-shadow: var(--shadow-lg);
-          border: 1px solid var(--border);
+          box-shadow: none;
+          border: none;
+          background: var(--bg);
+        }
+        .about-image-frame::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 40%;
+          background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+          pointer-events: none;
+          z-index: 1;
         }
         .about-primary-img {
           width: 100%;
-          height: 420px;
+          height: 480px;
           object-fit: cover;
-          object-position: center;
+          object-position: center top;
         }
         .about-experience-badge {
           position: absolute;
@@ -275,6 +294,43 @@ export function About() {
         .loc-icon {
           color: var(--accent);
           flex-shrink: 0;
+        }
+        .about-cta-row {
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+        .about-download-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 18px;
+          border-radius: var(--radius-sm);
+          background-color: var(--accent);
+          color: #07131D;
+          font-weight: 700;
+          font-size: 0.85rem;
+          text-decoration: none;
+          box-shadow: 0 4px 14px rgba(197, 155, 39, 0.25);
+          transition: all var(--transition-fast);
+        }
+        .about-download-cta:hover {
+          background-color: var(--accent-hover);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 18px rgba(197, 155, 39, 0.4);
+        }
+        .about-docs-link {
+          font-size: 0.84rem;
+          font-weight: 600;
+          color: var(--accent);
+          text-decoration: none;
+          transition: color var(--transition-fast);
+        }
+        .about-docs-link:hover {
+          color: var(--text);
+          text-decoration: underline;
         }
       `}</style>
     </section>
