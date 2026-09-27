@@ -32,6 +32,7 @@ pnpm-debug.log*
 # Sensitive documents, client tax filings, raw PDFs & scans
 *.pdf
 WhatsApp Image*
+owner photo*
 *.tmp
 
 # Operating System & IDE files
