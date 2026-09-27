@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "official-government-document",
+      "title": "J&K Public Works Department Contractor Enrolment Card",
+      "issuingAuthority": "Jal Shakti (P.H.E.) Department Kashmir / PW(R&B) D J&K",
+      "registrationNo": "SE/Hyd/Bud/2007-08/AAY/Upga/7/Civil/Sanitary",
+      "issueDate": "2025-04-01",
+      "validityDate": "2027-03-31",
+      "verifiedFields": ["legalName", "proprietor", "classification", "registrationNo", "validity"]
+    },
+    {
+      "id": "SRC-002",
+      "type": "official-government-document",
+      "title": "Income Tax Department Permanent Account Number Card",
+      "pan": "ALRPM6932B",
+      "cardHolder": "Nazir Ahmad Mir",
+      "fatherName": "Abdul Gani Mir",
+      "verifiedFields": ["pan", "proprietorName", "fatherName"]
+    },
+    {
+      "id": "SRC-003",
+      "type": "official-government-document",
+      "title": "Goods and Services Tax Return (GSTR-3B) Filing Document",
+      "gstin": "01ALRPM6932B1ZA",
+      "jurisdiction": "State - Jammu & Kashmir, Ward - Budgam",
+      "effectiveDate": "2017-07-08",
+      "verifiedFields": ["gstin", "taxpayerType", "effectiveDate"]
+    },
+    {
+      "id": "SRC-004",
+      "type": "official-contractor-banner",
+      "title": "M/S Nazir Ahmad Mir Official Business Signboard & Banner Scan",
+      "verifiedFields": ["phoneNumbers", "email", "businessScope", "address"]
+    }
+  ]
+}

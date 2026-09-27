@@ -1,0 +1,76 @@
+{
+  "assets": [
+    {
+      "id": "AST-001",
+      "type": "ai-generated",
+      "sourcePath": "assets/cover_fullbleed.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [1, 22],
+      "notes": "Full-bleed Kashmir bridge infrastructure hero visual"
+    },
+    {
+      "id": "AST-002",
+      "type": "official-scan",
+      "sourcePath": "assets/mir_nazir_banner.png",
+      "source": "company-supplied",
+      "rightsCleared": true,
+      "usedOnPages": [3],
+      "notes": "Scanned contractor signboard banner showing scope and contact details"
+    },
+    {
+      "id": "AST-003",
+      "type": "official-scan",
+      "sourcePath": "assets/pan_card.png",
+      "source": "company-supplied",
+      "rightsCleared": true,
+      "usedOnPages": [4],
+      "notes": "Official PAN Card scan for Nazir Ahmad Mir (ALRPM6932B)"
+    },
+    {
+      "id": "AST-004",
+      "type": "ai-generated",
+      "sourcePath": "assets/civil_hero.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [5, 7],
+      "notes": "Heavy civil engineering and mass concrete foundations background"
+    },
+    {
+      "id": "AST-005",
+      "type": "ai-generated",
+      "sourcePath": "assets/electrical_hero.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [8],
+      "notes": "High voltage electrical grid and transmission lines"
+    },
+    {
+      "id": "AST-006",
+      "type": "ai-generated",
+      "sourcePath": "assets/survey_hero.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [10],
+      "notes": "Surveying and DPR technical consultancy visual"
+    },
+    {
+      "id": "AST-007",
+      "type": "ai-generated",
+      "sourcePath": "assets/safety_hero.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [12],
+      "notes": "Safety and EHS compliance on site visual"
+    },
+    {
+      "id": "AST-008",
+      "type": "ai-generated",
+      "sourcePath": "assets/equipment_fleet.png",
+      "source": "ai-generated",
+      "rightsCleared": true,
+      "usedOnPages": [15, 16],
+      "notes": "Heavy equipment fleet lineup visual"
+    }
+  ]
+}

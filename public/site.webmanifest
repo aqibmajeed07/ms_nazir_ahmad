@@ -1,0 +1,16 @@
+{
+  "name": "M/S Nazir Ahmad Mir - A Class Contractor",
+  "short_name": "M/S Nazir Ahmad Mir",
+  "description": "A Class Construction Contractor in Jammu & Kashmir undertaking building construction, civil engineering, water supply, and electrical distribution works.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F2537",
+  "theme_color": "#0F2537",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

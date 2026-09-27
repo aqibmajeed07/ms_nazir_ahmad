@@ -1,0 +1,85 @@
+{
+  "company": {
+    "legalName": "M/S Nazir Ahmad Mir",
+    "constitution": "Sole Proprietorship",
+    "proprietor": "Nazir Ahmad Mir",
+    "fatherName": "Abdul Gani Mir",
+    "registrationNo": "SE/Hyd/Bud/2007-08/AAY/Upga/7/Civil/Sanitary",
+    "classification": "A Class Contractor",
+    "cardIssueDate": "01 April 2025",
+    "validityUpto": "31 March 2027",
+    "gstin": "01ALRPM6932B1ZA",
+    "pan": "ALRPM6932B",
+    "issuingAuthority": "Jal Shakti (P.H.E.) Department Kashmir / PW(R&B) D J&K"
+  },
+  "identity": {
+    "headquarters": "Approach Road, Railway Budgam, Jammu & Kashmir",
+    "branchOffice": "Approach Road, Railway Budgam, Jammu & Kashmir",
+    "verificationPortal": "jkpwdoms.jk.gov.in",
+    "regionServed": "Jammu & Kashmir (Kashmir Division)",
+    "yearsExperience": "18+",
+    "projectCount": "15+"
+  },
+  "leadership": [
+    {
+      "name": "Nazir Ahmad Mir",
+      "title": "Sole Proprietor & Managing Contractor",
+      "experience": "18+ Years",
+      "role": "Overall management, site execution, quality compliance, and departmental coordination."
+    },
+    {
+      "name": "Project Engineering Division",
+      "title": "Site Engineers & Supervisors",
+      "experience": "10-15 Years",
+      "role": "Site supervision, setting out, progress monitoring, and quality checks."
+    }
+  ],
+  "capabilities": [
+    "Civil & Structural Works (RCC, Foundations, Retaining Walls, Private Buildings)",
+    "Water & Public Health Works (Pipelines, Filtration, Reservoirs)",
+    "Electrical Works & Distribution (11kV Lines, Transformers, Electrification)",
+    "2D & 3D Drafting Support (Layouts & Elevations)",
+    "Government Material Supply & Transport"
+  ],
+  "equipment": [
+    { "name": "10/7 Mechanical Concrete Mixers", "category": "Concreting", "ownership": "owned" },
+    { "name": "3HP Needle Concrete Vibrators", "category": "Concreting", "ownership": "owned" },
+    { "name": "Electronic Auto-Levels & Survey Rigs", "category": "Surveying", "ownership": "owned" },
+    { "name": "Hydraulic Pressure Testing Rigs for Pipelines", "category": "Testing", "ownership": "owned" },
+    { "name": "5HP Dewatering Diesel Pump Sets", "category": "Hydraulics", "ownership": "owned" },
+    { "name": "JCB 3CX Backhoe Loaders", "category": "Earthmoving", "ownership": "owned" },
+    { "name": "Hydraulic Excavators", "category": "Earthmoving", "ownership": "hired" },
+    { "name": "Tipper Transport Trucks", "category": "Logistics", "ownership": "hired" }
+  ],
+  "quality": [
+    "Compulsory MTC (Manufacturer Test Certificate) for steel, cement, and pipes",
+    "On-site aggregate sieve analysis and silt content testing",
+    "7-day and 28-day concrete cube compressive strength testing",
+    "Pipeline hydraulic pressure testing before backfilling",
+    "Electrical insulation resistance and continuity testing"
+  ],
+  "safety": [
+    "Safety first approach with mandatory PPE on all job sites",
+    "Daily toolbox briefings and site hazard assessments",
+    "Work permit system for deep trenching and electrical line works",
+    "Regular inspection of tools, scaffolding, and plant machinery"
+  ],
+  "supplyChain": [
+    "Authorized Government Supplier of construction materials",
+    "Direct sourcing of certified TMT rebar and Portland cement",
+    "Established supply network for HDPE and GI pipes",
+    "Dedicated site logistics and material transport"
+  ],
+  "esg": [
+    "Local workforce: prioritizing local tradesmen and laborers in J&K",
+    "Careful trenching and site drainage to protect local water bodies",
+    "Dust control and noise mitigation near residential zones",
+    "Responsible material handling and waste cleanup"
+  ],
+  "contact": {
+    "phones": ["+91 7006080901", "+91 9622735483", "+91 7006690591"],
+    "email": "nmir2242@gmail.com",
+    "website": "jkpwdoms.jk.gov.in",
+    "address": "Approach Road, Railway Budgam, Jammu & Kashmir"
+  }
+}
