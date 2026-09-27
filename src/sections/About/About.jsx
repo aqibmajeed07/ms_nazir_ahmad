@@ -1,7 +1,7 @@
 import React from 'react';
 import companyConfig from '../../config/company';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
-import { Award, CheckCircle, ShieldCheck, MapPin, HardHat, Compass } from 'lucide-react';
+import { Award, CheckCircle, ShieldCheck, MapPin, Compass } from 'lucide-react';
 
 export function About() {
   return (
@@ -27,11 +27,21 @@ export function About() {
               </div>
             </div>
 
-            {/* Small site management card beneath image */}
-            <div className="about-subbox">
-              <HardHat size={20} className="subbox-icon" />
-              <div>
-                <strong>Active Site Leadership:</strong> Proprietor {companyConfig.proprietor} actively oversees ongoing fronts, ensuring materials meet departmental specifications.
+            {/* Owner Profile Card */}
+            <div className="about-owner-card">
+              <div className="about-owner-photo-wrap">
+                <img
+                  src="/images/owner_photo.png"
+                  alt={`${companyConfig.proprietor} — Sole Proprietor`}
+                  className="about-owner-photo"
+                />
+              </div>
+              <div className="about-owner-info">
+                <h4 className="about-owner-name">{companyConfig.proprietor}</h4>
+                <span className="about-owner-role">Sole Proprietor & Managing Contractor</span>
+                <p className="about-owner-bio">
+                  Direct on-site leadership across all active project fronts in J&amp;K. Over 18 years of hands-on construction experience.
+                </p>
               </div>
             </div>
           </div>
@@ -145,22 +155,59 @@ export function About() {
           line-height: 1.3;
           color: rgba(255, 255, 255, 0.9);
         }
-        .about-subbox {
-          margin-top: 14px;
+        .about-owner-card {
+          margin-top: 16px;
           background-color: var(--surface);
           border: 1px solid var(--border);
-          border-radius: var(--radius-sm);
-          padding: 12px 16px;
+          border-radius: var(--radius-md);
+          padding: 20px;
           display: flex;
           align-items: center;
-          gap: 12px;
-          font-size: 0.85rem;
+          gap: 18px;
+          transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .about-owner-card:hover {
+          border-color: var(--accent);
+          box-shadow: 0 4px 20px rgba(197, 155, 39, 0.1);
+        }
+        .about-owner-photo-wrap {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+          border: 3px solid var(--accent);
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+        .about-owner-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center top;
+        }
+        .about-owner-info {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        .about-owner-name {
+          font-family: var(--font-heading);
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--text);
+          margin: 0;
+        }
+        .about-owner-role {
+          font-size: 0.78rem;
+          font-weight: 600;
+          color: var(--accent);
+          letter-spacing: 0.3px;
+        }
+        .about-owner-bio {
+          font-size: 0.8rem;
           color: var(--text-muted);
           line-height: 1.45;
-        }
-        .subbox-icon {
-          color: var(--accent);
-          flex-shrink: 0;
+          margin-top: 4px;
         }
         .about-body-text {
           font-size: 0.96rem;
