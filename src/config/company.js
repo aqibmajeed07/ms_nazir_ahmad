@@ -99,24 +99,10 @@ export const companyConfig = {
       validity: "Current Edition",
       path: "/documents/company-brochure.pdf",
       fileName: "MS-Nazir-Ahmad-Mir-Brochure.pdf",
-      fileSize: "18.8 MB",
+      fileSize: "19.0 MB",
       icon: "FileText",
-      highlight: true
-    },
-    {
-      id: "doc-contractor-license",
-      title: "Class A Contractor Registration",
-      shortTitle: "A Class License",
-      description: "Official contractor registration certificate issued by Jal Shakti (P.H.E) Department Kashmir for civil and sanitary engineering works.",
-      category: "Government License",
-      department: "Jal Shakti (PHE) Kashmir",
-      validity: "Valid through 31 March 2027",
-      regNo: "SE/Hyd/Bud/2007-08/AAY/Upga/7",
-      path: "/documents/A-Class-Contractor-Registration.pdf",
-      fileName: "A-Class-Contractor-Registration.pdf",
-      fileSize: "155 KB",
-      icon: "Award",
-      highlight: true
+      highlight: true,
+      previewImage: "/images/certificates/preview-brochure.png"
     },
     {
       id: "doc-udyam-msme",
@@ -131,7 +117,8 @@ export const companyConfig = {
       fileName: "Udyam-Registration-Certificate.pdf",
       fileSize: "228 KB",
       icon: "ShieldCheck",
-      highlight: false
+      highlight: false,
+      previewImage: "/images/certificates/preview-udyam.png"
     },
     {
       id: "doc-gst-registration",
@@ -146,7 +133,8 @@ export const companyConfig = {
       fileName: "GST-Registration-Certificate.pdf",
       fileSize: "90 KB",
       icon: "FileCheck",
-      highlight: false
+      highlight: false,
+      previewImage: "/images/certificates/preview-gst.png"
     },
     {
       id: "doc-esic-registration",
@@ -161,7 +149,8 @@ export const companyConfig = {
       fileName: "ESIC-Registration-Certificate.pdf",
       fileSize: "105 KB",
       icon: "Building",
-      highlight: false
+      highlight: false,
+      previewImage: "/images/certificates/preview-esic.png"
     }
   ],
 

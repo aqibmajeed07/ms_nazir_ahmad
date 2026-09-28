@@ -23,3 +23,4 @@
 | **v0.1** | 2026-09-22 | Initial draft structure & data extraction | Design Team |
 | **v0.2** | 2026-09-22 | 16-page white theme layout & asset generation | Visual QA Team |
 | **v1.0** | 2026-09-22 | Master Loop V5 production build, 22 pages, dual PDF export | Lead Architect |
+| **v1.1** | 2026-09-28 | Integrated MSME Udyam, ESIC Form C-11, EPFO Form 5A & J&K Bank primary account from new pdf directory | Profile Engineering |

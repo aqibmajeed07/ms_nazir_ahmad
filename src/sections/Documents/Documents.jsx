@@ -17,6 +17,7 @@ const iconMap = {
 
 export function Documents() {
   const [activeModalDoc, setActiveModalDoc] = useState(null);
+  const [hoveredDocId, setHoveredDocId] = useState(null);
 
   const openViewer = (doc) => {
     setActiveModalDoc(doc);
@@ -46,7 +47,38 @@ export function Documents() {
               <div
                 key={doc.id}
                 className={`document-card ${isFeatured ? 'is-featured' : ''}`}
+                onMouseEnter={() => setHoveredDocId(doc.id)}
+                onMouseLeave={() => setHoveredDocId(null)}
               >
+                {/* Floating Certificate Hover Inspector Popover */}
+                {doc.previewImage && (
+                  <div className="doc-hover-inspector">
+                    <div className="inspector-header">
+                      <div className="inspector-status-badge">
+                        <span className="inspector-pulse-dot" />
+                        <span>Live Certificate Preview</span>
+                      </div>
+                      <span className="inspector-doc-type">{doc.category}</span>
+                    </div>
+                    
+                    <div className="inspector-image-container">
+                      <img 
+                        src={doc.previewImage} 
+                        alt={`${doc.title} Official Document`}
+                        className="inspector-full-img"
+                      />
+                      <div className="inspector-watermark-stamp">
+                        <span>GOVT. VERIFIED</span>
+                      </div>
+                    </div>
+
+                    <div className="inspector-footer">
+                      <div className="inspector-title">{doc.shortTitle || doc.title}</div>
+                      <div className="inspector-action-hint">Click to inspect fullscreen ↗</div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="doc-card-header">
                   <div className="doc-icon-wrap">
                     <IconComponent size={22} className="doc-icon" />
@@ -55,6 +87,31 @@ export function Documents() {
                     {doc.category}
                   </div>
                 </div>
+
+                {/* Certificate Interactive Preview Viewport */}
+                {doc.previewImage && (
+                  <div 
+                    className="doc-preview-viewport"
+                    onClick={() => openViewer(doc)}
+                    title={`Click to view full ${doc.title}`}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === 'Enter' && openViewer(doc)}
+                  >
+                    <img 
+                      src={doc.previewImage} 
+                      alt={`${doc.title} official certificate`}
+                      className="doc-preview-img"
+                      loading="lazy"
+                    />
+                    <div className="doc-preview-overlay">
+                      <span className="doc-preview-hover-tag">
+                        <Eye size={13} />
+                        <span>Hover to Preview Certificate</span>
+                      </span>
+                    </div>
+                  </div>
+                )}
 
                 <div className="doc-card-body">
                   <h3 className="doc-title">{doc.title}</h3>
@@ -225,7 +282,10 @@ export function Documents() {
 
         @media (min-width: 1080px) {
           .documents-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1040px;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
 
@@ -251,6 +311,214 @@ export function Documents() {
           border-color: rgba(197, 155, 39, 0.5);
           background: linear-gradient(180deg, var(--surface) 0%, var(--surface-secondary) 100%);
           box-shadow: 0 4px 20px rgba(197, 155, 39, 0.08);
+        }
+
+        /* Certificate Hover Inspector Popover - Elegant Card Overlay */
+        .doc-hover-inspector {
+          position: absolute;
+          inset: 6px;
+          background: rgba(11, 21, 35, 0.97);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border: 1.5px solid var(--accent);
+          border-radius: var(--radius-md);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(197, 155, 39, 0.25);
+          padding: 14px 16px;
+          z-index: 20;
+          pointer-events: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0.97);
+          transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+        }
+
+        .document-card:hover .doc-hover-inspector {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+        }
+
+        @media (max-width: 768px) {
+          .doc-hover-inspector {
+            display: none;
+          }
+        }
+
+        .inspector-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+          padding-bottom: 6px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .inspector-status-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          color: #22C55E;
+        }
+
+        .inspector-pulse-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: #22C55E;
+          box-shadow: 0 0 8px #22C55E;
+          animation: pulseGreen 1.5s infinite;
+        }
+
+        @keyframes pulseGreen {
+          0% { transform: scale(0.95); opacity: 0.7; }
+          50% { transform: scale(1.2); opacity: 1; }
+          100% { transform: scale(0.95); opacity: 0.7; }
+        }
+
+        .inspector-doc-type {
+          font-size: 0.68rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: var(--accent);
+          letter-spacing: 0.5px;
+        }
+
+        .inspector-image-container {
+          flex: 1;
+          width: 100%;
+          min-height: 280px;
+          background: #ffffff;
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+          border: 1px solid rgba(197, 155, 39, 0.35);
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .inspector-full-img {
+          width: 100%;
+          height: 100%;
+          max-height: 330px;
+          object-fit: contain;
+          display: block;
+        }
+
+        .inspector-watermark-stamp {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background: rgba(16, 185, 129, 0.92);
+          color: #ffffff;
+          font-size: 0.62rem;
+          font-weight: 800;
+          padding: 3px 8px;
+          border-radius: 2px;
+          letter-spacing: 0.8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .inspector-footer {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.75rem;
+          padding-top: 6px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .inspector-title {
+          font-weight: 700;
+          color: #ffffff;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 60%;
+        }
+
+        .inspector-action-hint {
+          color: var(--accent);
+          font-weight: 600;
+          font-size: 0.72rem;
+        }
+
+        /* Certificate Interactive Preview Viewport */
+        .doc-preview-viewport {
+          width: 100%;
+          height: 155px;
+          border-radius: var(--radius-sm);
+          border: 1px solid var(--border);
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 16px;
+          cursor: pointer;
+          background-color: #0b1523;
+          transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .document-card:hover .doc-preview-viewport {
+          border-color: var(--accent);
+          box-shadow: 0 4px 18px rgba(197, 155, 39, 0.2);
+        }
+
+        .doc-preview-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+          filter: brightness(0.94) contrast(1.04);
+        }
+
+        .document-card:hover .doc-preview-img {
+          transform: scale(1.05);
+          filter: brightness(1) contrast(1.08);
+        }
+
+        .doc-preview-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(10,20,32,0.88) 100%);
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding-bottom: 10px;
+          transition: background 0.3s ease;
+        }
+
+        .document-card:hover .doc-preview-overlay {
+          background: linear-gradient(180deg, rgba(197,155,39,0.06) 15%, rgba(10,20,32,0.92) 100%);
+        }
+
+        .doc-preview-hover-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          color: var(--accent);
+          background: rgba(15, 23, 42, 0.88);
+          border: 1px solid rgba(197, 155, 39, 0.4);
+          padding: 4px 10px;
+          border-radius: var(--radius-full);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+          transition: transform var(--transition-fast), background var(--transition-fast);
+        }
+
+        .document-card:hover .doc-preview-hover-tag {
+          transform: translateY(-2px);
+          background: rgba(197, 155, 39, 0.22);
+          border-color: var(--accent);
+          color: #FFF;
         }
 
         .doc-card-header {

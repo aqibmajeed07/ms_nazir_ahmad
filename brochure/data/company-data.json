@@ -3,13 +3,15 @@
     "legalName": "M/S Nazir Ahmad Mir",
     "constitution": "Sole Proprietorship",
     "proprietor": "Nazir Ahmad Mir",
-    "fatherName": "Abdul Gani Mir",
     "registrationNo": "SE/Hyd/Bud/2007-08/AAY/Upga/7/Civil/Sanitary",
     "classification": "A Class Contractor",
     "cardIssueDate": "01 April 2025",
     "validityUpto": "31 March 2027",
     "gstin": "01ALRPM6932B1ZA",
     "pan": "ALRPM6932B",
+    "udyamRegistrationNo": "UDYAM-JK-04-0058024",
+    "esicCode": "19000337770000999",
+    "epfoCode": "JKSRN4103698000",
     "issuingAuthority": "Jal Shakti (P.H.E.) Department Kashmir / PW(R&B) D J&K"
   },
   "identity": {
@@ -59,10 +61,11 @@
     "Electrical insulation resistance and continuity testing"
   ],
   "safety": [
-    "Safety first approach with mandatory PPE on all job sites",
+    "Safety first approach with mandatory PPE on all active job sites",
     "Daily toolbox briefings and site hazard assessments",
     "Work permit system for deep trenching and electrical line works",
-    "Regular inspection of tools, scaffolding, and plant machinery"
+    "Regular inspection of tools, scaffolding, and plant machinery",
+    "Complete statutory workforce welfare: full ESIC (health/medical) and EPFO (provident fund/pension) social security"
   ],
   "supplyChain": [
     "Authorized Government Supplier of construction materials",
@@ -74,8 +77,85 @@
     "Local workforce: prioritizing local tradesmen and laborers in J&K",
     "Careful trenching and site drainage to protect local water bodies",
     "Dust control and noise mitigation near residential zones",
-    "Responsible material handling and waste cleanup"
+    "Responsible material handling and waste cleanup",
+    "Statutory social security compliance under ESIC (Code: 19000337770000999) and EPFO (Code: JKSRN4103698000)"
   ],
+  "statutory": {
+    "pwd": {
+      "classification": "A Class Contractor",
+      "registrationNo": "SE/Hyd/Bud/2007-08/AAY/Upga/7/Civil/Sanitary",
+      "issuingAuthority": "Jal Shakti (P.H.E.) Department Kashmir / PW(R&B) D J&K",
+      "cardIssueDate": "01 April 2025",
+      "validityUpto": "31 March 2027",
+      "status": "Active"
+    },
+    "gst": {
+      "gstin": "01ALRPM6932B1ZA",
+      "form": "Form GST REG-06",
+      "legalName": "NAZIR AHMAD MIR",
+      "tradeName": "NAZIR AHMAD MIR",
+      "constitution": "Proprietorship",
+      "effectiveDate": "08 July 2017",
+      "amendmentDate": "17 November 2023",
+      "taxpayerType": "Regular",
+      "jurisdiction": "State - Jammu & Kashmir, Ward - Budgam",
+      "status": "Active"
+    },
+    "udyam": {
+      "registrationNo": "UDYAM-JK-04-0058024",
+      "enterpriseName": "NAZIR AHMAD MIR",
+      "classification": "Micro Enterprise",
+      "majorActivity": "Manufacturing",
+      "nic2Digit": "42 - Civil Engineering",
+      "nic4Digit": "4290 - Construction of other civil engineering projects",
+      "nic5Digit": "42909 - Other civil engineering projects n.e.c.",
+      "incorporationDate": "01/09/2026",
+      "commencementDate": "01/09/2026",
+      "registrationDate": "26/09/2026",
+      "socialCategory": "General",
+      "districtIndustriesCentre": "Budgam (Jammu and Kashmir)",
+      "msmeDfo": "Jammu (Jammu and Kashmir)",
+      "officialMobile": "+91 7006080901",
+      "officialEmail": "nmir2242@gmail.com",
+      "status": "Active"
+    },
+    "esic": {
+      "codeNumber": "19000337770000999",
+      "form": "Form C-11",
+      "issueDate": "22/09/2026",
+      "act": "Employees' State Insurance Act, 1948 (Section 1(3) / 1(5))",
+      "principalEmployer": "M/s. NAZIR AHMAD MIR",
+      "employeesCovered": 6,
+      "regionalOffice": "ESI Corporation, Panchdeep Bhawan, 10-B Shashi Nagar, Jammu",
+      "branchOffice": "Room No. 306-307, Hotel Green Mountain, Palpora, Sonawar, Srinagar - 190001",
+      "authorizedBank": "State Bank of India",
+      "status": "Active"
+    },
+    "epfo": {
+      "establishmentCode": "JKSRN4103698000",
+      "form": "Form No. 5A (Return of Ownership)",
+      "applicationNumber": "10002380388",
+      "letterNumber": "EA04936262",
+      "date": "24/09/2026",
+      "establishmentName": "NAZIR AHMAD MIR",
+      "industry": "ENGINEERS - ENGG. CONTRACTORS",
+      "commencementOfBusiness": "01/04/2025",
+      "schemes": [
+        "Employees' Provident Fund Scheme 1952",
+        "Employees' Pension Scheme 1995",
+        "Employees' Deposit Linked Insurance Scheme 1976 (EDLI)"
+      ],
+      "rpfcOffice": "Regional Provident Fund Commissioner, Srinagar - 190001",
+      "authorizedSignatory": "Nazir Ahmad Mir (Director / Proprietor)",
+      "status": "Active"
+    },
+    "pan": {
+      "panNumber": "ALRPM6932B",
+      "cardHolder": "Nazir Ahmad Mir",
+      "category": "Individual / Sole Proprietor",
+      "status": "Verified"
+    }
+  },
   "contact": {
     "phones": ["+91 7006080901", "+91 9622735483", "+91 7006690591"],
     "email": "nmir2242@gmail.com",

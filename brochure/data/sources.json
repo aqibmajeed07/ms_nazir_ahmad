@@ -16,13 +16,12 @@
       "title": "Income Tax Department Permanent Account Number Card",
       "pan": "ALRPM6932B",
       "cardHolder": "Nazir Ahmad Mir",
-      "fatherName": "Abdul Gani Mir",
-      "verifiedFields": ["pan", "proprietorName", "fatherName"]
+      "verifiedFields": ["pan", "proprietorName"]
     },
     {
       "id": "SRC-003",
       "type": "official-government-document",
-      "title": "Goods and Services Tax Return (GSTR-3B) Filing Document",
+      "title": "Goods and Services Tax Return (GSTR-3B) & REG-06 Filing Document",
       "gstin": "01ALRPM6932B1ZA",
       "jurisdiction": "State - Jammu & Kashmir, Ward - Budgam",
       "effectiveDate": "2017-07-08",
@@ -33,6 +32,39 @@
       "type": "official-contractor-banner",
       "title": "M/S Nazir Ahmad Mir Official Business Signboard & Banner Scan",
       "verifiedFields": ["phoneNumbers", "email", "businessScope", "address"]
+    },
+    {
+      "id": "SRC-005",
+      "type": "official-government-document",
+      "title": "Ministry of MSME Udyam Registration Certificate",
+      "sourceFile": "new pdf/Print _ Udyam Registration Certificate.pdf",
+      "registrationNo": "UDYAM-JK-04-0058024",
+      "issuingAuthority": "Ministry of Micro, Small and Medium Enterprises, Govt. of India",
+      "issueDate": "2026-09-26",
+      "enterpriseType": "Micro (Manufacturing / Civil Engineering NIC 42909)",
+      "verifiedFields": ["udyamRegistrationNo", "enterpriseType", "nicCode", "commencementDate", "registeredAddress", "registeredPhone"]
+    },
+    {
+      "id": "SRC-006",
+      "type": "official-government-document",
+      "title": "Employees' State Insurance Corporation (ESIC) Form C-11 Allotment Letter",
+      "sourceFile": "new pdf/19000337770000999C11.pdf",
+      "codeNumber": "19000337770000999",
+      "issuingAuthority": "Regional Office Jammu / Branch Office Srinagar, ESI Corporation",
+      "issueDate": "2026-09-22",
+      "verifiedFields": ["esicCode", "principalEmployer", "employeesCovered", "jurisdictionBranch", "statutoryCoverage"]
+    },
+    {
+      "id": "SRC-007",
+      "type": "official-government-document",
+      "title": "Employees' Provident Fund Organisation (EPFO) Form 5A & Code Allotment Letter",
+      "sourceFile": "new pdf/Form5aPreview (5).pdf & new pdf/JKSRN4103698000.pdf",
+      "establishmentCode": "JKSRN4103698000",
+      "issuingAuthority": "Regional Provident Fund Commissioner, Srinagar (EPFO)",
+      "applicationNumber": "10002380388",
+      "letterNumber": "EA04936262",
+      "issueDate": "2026-09-24",
+      "verifiedFields": ["epfoCode", "ownershipParticulars", "industryClassification", "schemesCovered", "authorizedSignatory"]
     }
   ]
 }

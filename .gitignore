@@ -32,6 +32,7 @@ pnpm-debug.log*
 # Sensitive documents, client tax filings, raw PDFs & scans
 *.pdf
 !public/documents/*.pdf
+!MS-Nazir-Ahmad-Mir-Brochure.pdf
 WhatsApp Image*
 owner photo*
 *.tmp

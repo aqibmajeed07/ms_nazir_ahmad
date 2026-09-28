@@ -1,6 +1,10 @@
-const { chromium } = require('playwright');
-const path = require('path');
-const fs = require('fs');
+import { chromium } from 'playwright';
+import path from 'node:path';
+import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function generatePDF() {
   console.log('=== MASTER LOOP V5 DUAL PDF RENDERER ===');

@@ -71,6 +71,42 @@
       "rightsCleared": true,
       "usedOnPages": [15, 16],
       "notes": "Heavy equipment fleet lineup visual"
+    },
+    {
+      "id": "AST-009",
+      "type": "official-government-certificate",
+      "sourcePath": "new pdf/Print _ Udyam Registration Certificate.pdf",
+      "source": "government-portal",
+      "rightsCleared": true,
+      "usedOnPages": [2, 3, 4, 13, 14],
+      "notes": "Ministry of MSME Udyam Registration Certificate (UDYAM-JK-04-0058024)"
+    },
+    {
+      "id": "AST-010",
+      "type": "official-government-certificate",
+      "sourcePath": "new pdf/19000337770000999C11.pdf",
+      "source": "government-portal",
+      "rightsCleared": true,
+      "usedOnPages": [4, 11, 13, 14],
+      "notes": "Employees' State Insurance Corporation (ESIC) Form C-11 Registration Letter (Code: 19000337770000999)"
+    },
+    {
+      "id": "AST-011",
+      "type": "official-government-certificate",
+      "sourcePath": "new pdf/Form5aPreview (5).pdf",
+      "source": "government-portal",
+      "rightsCleared": true,
+      "usedOnPages": [4, 11, 13, 14],
+      "notes": "Employees' Provident Fund Organisation (EPFO) Form 5A Return of Ownership & Bank Details (Code: JKSRN4103698000)"
+    },
+    {
+      "id": "AST-012",
+      "type": "official-government-certificate",
+      "sourcePath": "new pdf/JKSRN4103698000.pdf",
+      "source": "government-portal",
+      "rightsCleared": true,
+      "usedOnPages": [4, 13],
+      "notes": "EPFO Authorized Signatory & eSign Allotment Letter EA04936262"
     }
   ]
 }
